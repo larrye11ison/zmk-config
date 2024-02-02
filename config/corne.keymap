@@ -8,6 +8,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+// define the layers
+#define DEFAULT    0
+#define NAVI       1
+#define NUMBERS    2
+#define SYMBOLS    3
+#define FKEYS      4
+#define MEDIA      5
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -19,10 +27,15 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+//   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+//   &mt LGUI A &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+//   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
+//                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+
+   &trans &kp SQT     &kp COMMA  &kp DOT     &kp P       &kp Y         &kp F &kp G       &kp C       &kp R       &kp L      &trans
+   &trans &mt LGUI A  &mt ALT O  &mt CTRL E  &mt SHFT U  &kp I         &kp D &mt SHFT H  &mt CTRL T  &mt ALT N   &mt GUI S  &trans
+   &trans &kp SEMI    &kp Q      &kp J       &kp K       &kp X         &kp B &kp M       &kp W       &kp V       &kp Z      &trans
+                      &lt MEDIA ESC   &lt NUMBERS TAB  &lt NAVI ENT    &lt SYMBOLS SPACE  &lt FKEYS BSPC  &lt MEDIA ENTER
                         >;
                 };
                 lower_layer {
