@@ -9,41 +9,28 @@
 #include <dt-bindings/zmk/bt.h>
 
 // define the layers
-#define DEFAULT    0
-#define NAVI       1
-#define NUMBERS    2
-#define SYMBOLS    3
-#define FKEYS      4
-#define MEDIA      5
+#define L_DEFAULT    0
+#define L_NAVI       1
+#define L_NUMBERS    2
+#define L_SYMBOLS    3
+#define L_FKEYS      4
+#define L_MEDIA      5
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-//   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-//   &mt LGUI A &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-//   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-//                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
 
-   &trans &kp SQT     &kp COMMA  &kp DOT     &kp P       &kp Y         &kp F &kp G       &kp C       &kp R       &kp L      &trans
-   &trans &mt LGUI A  &mt ALT O  &mt CTRL E  &mt SHFT U  &kp I         &kp D &mt SHFT H  &mt CTRL T  &mt ALT N   &mt GUI S  &trans
-   &trans &kp SEMI    &kp Q      &kp J       &kp K       &kp X         &kp B &kp M       &kp W       &kp V       &kp Z      &trans
+   &kp LALT  &kp SQT     &kp COMMA  &kp DOT     &kp P       &kp Y         &kp F &kp G       &kp C       &kp R       &kp L      &kp RALT
+   &kp LSHFT &kp A       &kp O      &kp E       &kp U       &kp I         &kp D &kp H       &kp T       &kp N       &kp S      &kp RSHFT
+   &kp LCTRL &kp SEMI    &kp Q      &kp J       &kp K       &kp X         &kp B &kp M       &kp W       &kp V       &kp Z      &kp RCTRL
                       &lt MEDIA ESC   &lt NUMBERS TAB  &lt NAVI ENT    &lt SYMBOLS SPACE  &lt FKEYS BSPC  &lt MEDIA ENTER
                         >;
                 };
+
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
@@ -53,11 +40,6 @@
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
