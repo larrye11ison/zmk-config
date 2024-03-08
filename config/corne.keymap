@@ -26,7 +26,7 @@
    &kp LSHFT &kp A       &kp O      &kp E       &kp U       &kp I         &kp D &kp H       &kp T       &kp N       &kp S      &kp RSHFT
    &kp LCTRL &kp SEMI    &kp Q      &kp J       &kp K       &kp X         &kp B &kp M       &kp W       &kp V       &kp Z      &kp RCTRL
                       // &lt L_MEDIA ESC   &lt L_NUMBERS TAB  &lt L_NAVI ENT    &lt L_SYMBOLS SPACE  &lt L_FKEYS BSPC  &lt L_MEDIA ENTER
-                      &lt L_MEDIA A  &kp A &kp A &kp A &kp A &kp A 
+                      &lt L_MEDIA ESC  &lt L_NUMBERS TAB &kp A &kp A &kp A &kp A 
                         >;
                 };
 
