@@ -20,7 +20,7 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
+                _0_default_layer {
                         bindings = <
    &kp LALT  &kp SQT     &kp COMMA  &kp DOT     &kp P       &kp Y         &kp F &kp G       &kp C       &kp R       &kp L      &kp RALT
    &kp LSHFT &kp A       &kp O      &kp E       &kp U       &kp I         &kp D &kp H       &kp T       &kp N       &kp S      &kp RSHFT
@@ -29,21 +29,49 @@
                         >;
                 };
 
-                lower_layer {
+                _1_navi_layer {
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+                                 &trans    &trans    &trans          &trans    &trans    &trans
                         >;
                 };
 
-                raise_layer {
+                _2_numbers_layer {
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+                                 &trans    &trans    &trans          &trans    &trans    &trans
+                        >;
+                };
+
+                _3_symbols_layer {
+                        bindings = <
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+                                 &trans    &trans    &trans          &trans    &trans    &trans
+                        >;
+                };
+
+                _4_fkeys_layer {
+                        bindings = <
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+                                 &trans    &trans    &trans          &trans    &trans    &trans
+                        >;
+                };
+
+
+                _5_media_layer {
+                        bindings = <
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+   &trans    &trans    &trans    &trans    &trans    &trans          &trans    &trans    &trans    &trans    &trans    &trans
+                                 &trans    &trans    &trans          &trans    &trans    &trans
                         >;
                 };
         };
