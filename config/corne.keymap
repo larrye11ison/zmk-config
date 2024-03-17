@@ -9,12 +9,12 @@
 
 // define the layers
 
-#define L_DEFAULT    0
-#define L_NAVI       1
-#define L_NUMBERS    2
-#define L_SYMBOLS    3
-#define L_FKEYS      4
-#define L_MEDIA      5
+#define L_DEF  0
+#define L_NAV  1
+#define L_NUM  2
+#define L_SYM  3
+#define L_FKY  4
+#define L_MED  5
 
 / {
     keymap {
@@ -25,7 +25,7 @@
 &kp LALT   &kp SQT   &kp COMMA  &kp DOT          &kp P              &kp Y               &kp F                &kp G             &kp C               &kp R  &kp L  &kp RALT
 &kp LSHFT  &kp A     &kp O      &kp E            &kp U              &kp I               &kp D                &kp H             &kp T               &kp N  &kp S  &kp RSHFT
 &kp LCTRL  &kp SEMI  &kp Q      &kp J            &kp K              &kp X               &kp B                &kp M             &kp W               &kp V  &kp Z  &kp RCTRL
-                                &lt L_MEDIA ESC  &lt L_NUMBERS TAB  &lt L_NAVI ENTER    &lt L_SYMBOLS SPACE  &lt L_FKEYS BSPC  &lt L_MEDIA DELETE
+                                &lt L_MED ESC  &lt L_NUM TAB  &lt L_NAV ENTER    &lt L_SYM SPACE  &lt L_FKY BSPC  &lt L_MED DELETE
             >;
         };
 
