@@ -18,6 +18,20 @@
 #define L_MED  5
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        lgui {
+            bindings = <&kp LEFT_GUI>;
+            key-positions = <36 37>;
+        };
+
+        rgui {
+            bindings = <&kp RIGHT_GUI>;
+            key-positions = <41 40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -68,10 +82,10 @@
 
         _5_media_layer {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &kp K_MUTE  &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans          &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp RSHFT   &kp RCTRL        &kp RALT           &kp RGUI        &trans
-&trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans      &trans           &trans             &bt BT_CLR_ALL  &trans
-                            &trans     &trans     &trans    &trans  &trans      &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &kp K_MUTE    &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans          &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans  &kp RSHFT     &kp RCTRL        &kp RALT           &kp RGUI        &trans
+&trans  &trans    &trans    &trans     &trans     &trans    &trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2       &bt BT_CLR_ALL  &trans
+                            &trans     &trans     &trans    &trans  &trans        &trans
             >;
         };
     };
